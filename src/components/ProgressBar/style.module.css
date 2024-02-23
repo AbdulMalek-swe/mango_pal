@@ -1,0 +1,24 @@
+.progress_area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 80%;
+    height: 10px;
+    background-color: gray;
+    border-radius: 20px;
+    transition: 3s ease-in;
+    overflow: hidden;
+}
+
+.progress div {
+    transition: width .8s ease;
+}
+
+.progress_text {
+
+    color: rgb(0, 0, 0);
+}
