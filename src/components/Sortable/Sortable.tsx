@@ -27,7 +27,6 @@ const Sortable = () => {
         <div className='flex justify-center flex-col  '>
             {
                 data.map((item, index) => <div draggable
-
                     onDragStart={() => dragPeople.current = index}
                     onDragEnter={() => dragChangePeople.current = index}
                     onDragEnd={handleDrag}

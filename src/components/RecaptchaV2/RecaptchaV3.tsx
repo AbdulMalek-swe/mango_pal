@@ -22,7 +22,7 @@ const RecaptchaV3 = () => {
     return (
         <div>
             {/* <div className='g-recaptcha bg-red-900' data-sitekey="6Lf_8n0pAAAAAM1ibs5TZ-Xw2_lwAyW70kQu2yO-" data-size="invisible" /> */}
-            <button className='bg-red-800 p-4' onClick={() => {
+            <button className='bg-red-500 py-4 px-6 rounded-xl hover:bg-red-300' onClick={() => {
                 handleClick()
             }}>Show recaptcha token version -1</button>
         </div>

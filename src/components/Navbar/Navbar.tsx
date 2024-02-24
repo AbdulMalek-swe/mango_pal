@@ -18,7 +18,16 @@ const Navbar = () => {
                     className={`nav-links ${active ? 'top-[10%]' : ' top-[-100%]'} duration-500 md:static absolute   bg-[#1C9E00]  md:min-h-fit min-h-[60vh] left-0  md:w-auto  w-full flex items-center px-5   `}>
                     <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                         <li>
-                            <a className="hover:text-gray-200" href="#">Products</a>
+                            <Link href="/captcha" className="hover:text-gray-200">Captcha</Link>
+
+                        </li>
+                        <li>
+                            <Link href="/sortable" className="hover:text-gray-200">Sortable</Link>
+
+                        </li>
+                        <li>
+                            <Link href="/not-found" className="hover:text-gray-200">Products</Link>
+
                         </li>
                     </ul>
                 </div>

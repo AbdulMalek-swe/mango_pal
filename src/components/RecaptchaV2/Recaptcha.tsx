@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ReCaptcha = ({ siteKey, callback }) => {
+const ReCaptcha = ({ siteKey }) => {
     const recaptchaRef = useRef(null);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const ReCaptcha = ({ siteKey, callback }) => {
         <>
             <div ref={recaptchaRef}>
             </div>
-            <button className='bg-red-800 p-4 mx-5' onClick={() => {
+            <button className='bg-red-500 py-4 px-6 rounded-xl hover:bg-red-300' onClick={() => {
                 handleClick()
             }}>Show recaptcha version 2</button></>
 
