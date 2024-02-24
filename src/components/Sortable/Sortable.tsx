@@ -26,12 +26,12 @@ const Sortable = () => {
     return (
         <div className='flex justify-center flex-col  '>
             {
-                data.map((item, index) => <div draggable
+                data.map((user, index) => <div draggable
                     onDragStart={() => dragPeople.current = index}
                     onDragEnter={() => dragChangePeople.current = index}
                     onDragEnd={handleDrag}
                     onDragOver={e => e.preventDefault()}
-                    key={index} className='bg-gray-700 m-3 p-5 rounded-md hover:bg-red-400 cursor-pointer'>{item?.name}</div>)
+                    key={index} className='bg-gray-700 m-3 p-5 rounded-md hover:bg-red-400 cursor-pointer'>{user?.name}</div>)
             }
         </div>
     );

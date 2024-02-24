@@ -26,7 +26,7 @@ const Navbar = () => {
 
                         </li>
                         <li>
-                            <Link href="/not-found" className="hover:text-gray-200">Products</Link>
+                            <Link href="/floating" className="hover:text-gray-200">Floating ui</Link>
 
                         </li>
                     </ul>
