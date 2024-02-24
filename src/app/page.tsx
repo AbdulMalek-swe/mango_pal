@@ -1,29 +1,17 @@
 "use client";
 
+import ReCaptcha from '@/components/RecaptchaV2/Recaptcha';
+import RecaptchaV3 from '@/components/RecaptchaV2/RecaptchaV3';
 import { useEffect } from 'react';
 
 export default function Home() {
-  const handleLoaded = () => {
-    window.grecaptcha.ready(() => {
-      window.grecaptcha
-        .execute("6LeL7XwpAAAAAC8CrcaGBSZQMwvVzJwPvEOHdkNE", { action: "homepage" })
-        .then((token) => {
-          // Handle the token as needed
-          console.log(token);
-        });
-    });
-  };
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = 'https://www.google.com/recaptcha/api.js?render=6LeL7XwpAAAAAC8CrcaGBSZQMwvVzJwPvEOHdkNE';
-    script.addEventListener("load", handleLoaded);
-    document.body.appendChild(script);
-  }, []);
 
   return (
     <main className='text-left flex justify-start'>
-      <div className='g-recaptcha bg-red-900' data-sitekey="6LeL7XwpAAAAAC8CrcaGBSZQMwvVzJwPvEOHdkNE" data-size="invisible" />
+      <RecaptchaV3 />
+      <ReCaptcha siteKey="6LeL7XwpAAAAAC8CrcaGBSZQMwvVzJwPvEOHdkNE" />
+      {/* <div className='g-recaptcha bg-red-900' data-sitekey="6Lf_8n0pAAAAAM1ibs5TZ-Xw2_lwAyW70kQu2yO-" data-size="invisible" /> */}
     </main>
   );
 }
