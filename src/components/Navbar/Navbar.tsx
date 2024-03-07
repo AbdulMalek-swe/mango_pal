@@ -1,12 +1,22 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import { BsChatFill, BsFillPersonFill } from "react-icons/bs";
+import { FaShoppingCart } from 'react-icons/fa';
 import style from './style.module.css'
+import Image from 'next/image';
 const Navbar = () => {
+    const [active, setActive] = useState(false);
+    const handleOpenMenu = () => {
+        setActive(!active)
+    }
     return (
         <div>
-
             <div className={style.header}>
-                <div className={style.logo}>logo
-                    <a href="">sdfsf <img src="flipkat.png" /> </a>
+                <div className={style.logo}>
+                    <a href=""> <Image src="/assets/logo.png" width={200} height={200} alt='loading...' className='w-[40px] h-[30px] rounded-full' /> </a>
                 </div>
                 <div className={style.search}>
                     <form>
@@ -14,19 +24,24 @@ const Navbar = () => {
                     </form>
                 </div>
                 <div className={style.icons}>
-                    <a href="" className={style.fafa_heart}> sdfds</a>
+                    <Link href="" className="text-white text-xl"> <BsChatFill /> </Link>
+                    <Link href="" className="text-white text-xl"> <FaShoppingCart /> </Link>
+                    <Link href="/pages/auth/login" className="text-white text-xl"> <BsFillPersonFill /> </Link>
 
+                    <button onClick={() => handleOpenMenu()} className="text-white text-xl">
+                        {!active ? <GiHamburgerMenu /> :
+                            <IoMdClose />}
+                    </button>
                 </div>
-                <div className={style.links}>
-                    <a href="" > sfs</a>
-                    <a href=""> sfs</a>
-                    <a href=""> sfs</a>
-                    <a href=""> sfs</a>
-                    <a href=""> sfs</a>
-                </div >
-
             </div>
-        </div>
+            <div className={` ${!active ? "" : style.showmylinks} ${style.links}  `}>
+                <a href="" className='text-center' >Home</a>
+                <a href="" className='text-center' >Service</a>
+                <a href=""> About</a>
+                <a href=""> Contact</a>
+                <a href="">Blog</a>
+            </div >
+        </div >
 
 
     );
