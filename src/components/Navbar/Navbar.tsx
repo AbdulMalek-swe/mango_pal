@@ -25,7 +25,7 @@ const Navbar = () => {
                 </div>
                 <div className={style.icons}>
                     <Link href="" className="text-white text-xl"> <BsChatFill /> </Link>
-                    <Link href="" className="text-white text-xl"> <FaShoppingCart /> </Link>
+                    <Link href="/pages/addToCart" className="text-white text-xl"> <FaShoppingCart /> </Link>
                     <Link href="/pages/auth/login" className="text-white text-xl"> <BsFillPersonFill /> </Link>
 
                     <button onClick={() => handleOpenMenu()} className="text-white text-xl">
