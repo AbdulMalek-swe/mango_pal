@@ -28,7 +28,7 @@ const Navbar = () => {
                     <Link href="/pages/addToCart" className="text-white text-xl"> <FaShoppingCart /> </Link>
                     <Link href="/pages/auth/login" className="text-white text-xl"> <BsFillPersonFill /> </Link>
 
-                    <button id='text' onClick={() => handleOpenMenu()} className="text-white text-xl">
+                    <button aria-label="Submit Form" onClick={() => handleOpenMenu()} className="text-white text-xl">
                         {!active ? <GiHamburgerMenu /> :
                             <IoMdClose />}
                     </button>
